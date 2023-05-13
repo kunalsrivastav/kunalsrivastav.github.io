@@ -9,7 +9,7 @@ const AdditionalTechnology = () => {
             <h2>Additional Technology & Skills</h2>
             <ul>
                 {
-                    ADDITIONAL_TECHNOLGY_SKILLS?.map((skill: string) => <li>{skill}</li>)
+                    ADDITIONAL_TECHNOLGY_SKILLS?.map((skill: string, index: number) => <li key={index}>{skill}</li>)
                 }
             </ul>
         </div>

@@ -30,8 +30,8 @@ const ProjectInfo = () => {
             <h2>Projects</h2>
             <div className="projects">
                 {
-                    PROJECT_INFO?.map((project: any) => {
-                        return <div className="project-card">
+                    PROJECT_INFO?.map((project: any, index: number) => {
+                        return <div key={index} className="project-card">
                             <div>
                                 <img src={project?.img} alt={project?.imgAlt} />
                                 <h3>{project?.title}</h3>

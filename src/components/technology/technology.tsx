@@ -45,8 +45,8 @@ const Technologies = () => {
             <h2>Technologies</h2>
             <div className="technology-wrapper">
                 {
-                    TECHNOLOGIES_INFO?.map((technology: any) => {
-                        return <div className="technology-card">
+                    TECHNOLOGIES_INFO?.map((technology: any, index: number) => {
+                        return <div key={index} className="technology-card">
                             <div className="basic-info">
                                 <h3>{technology?.title}</h3>
                                 <div className="percentage" style={{ width: `${technology?.percentageShare}%` }}></div>

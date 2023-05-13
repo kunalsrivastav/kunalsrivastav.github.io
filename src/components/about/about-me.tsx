@@ -3,6 +3,7 @@ import './about-me.css';
 
 const ABOUT_ME_INFO = [
     {
+        key: '4',
         timespan: 'Apr 2022 - Apr 2023',
         // eslint-disable-next-line
         description: 'As a software developer intern at an EV company, I had the opportunity to work on an exciting project called the Fleet Management Web App. This web application was designed to cater to the needs of customers who purchased vehicles from our company. It aimed to provide them with a comprehensive and user-friendly platform to efficiently manage their vehicle fleet. \
@@ -15,14 +16,17 @@ const ABOUT_ME_INFO = [
                         Overall, the Fleet Management Web App empowered customers to efficiently manage their vehicle fleet, leveraging features such as live tracking, trip history, notifications, charging station information, and comprehensive reports.'
     },
     {
+        key: '3',
         timespan: 'Aug 2019 - May 2023',
         description: 'Completed Bachelor\'s of Technology in Computer Science Engineering from GLA University, Mathura, India.'
     },
     {
+        key: '2',
         timespan: 'May 2019',
         description: 'Completed Intermediate(CBSE - PCM) from Vishwanath Academy, Lucknow, India.'
     },
     {
+        key: '1',
         timespan: 'May 2017',
         description: 'Completed High School(CBSE) from Vishwanath Academy, Lucknow, India.'
     }
@@ -35,7 +39,7 @@ const AboutMe = () => {
             <div className='about-box'>
                 {
                     ABOUT_ME_INFO?.map((aboutMe: any) => {
-                        return <div className='about-card'>
+                        return <div key={aboutMe?.key} className='about-card'>
                             <h3>{aboutMe?.timespan}</h3>
                             <p>{aboutMe?.description}</p>
                         </div>
