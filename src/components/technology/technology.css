@@ -1,0 +1,36 @@
+.technology-info {
+    padding: 0 16px;
+    color: var(--text-color);
+}
+
+.technology-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+.technology-card {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    border: 1px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(to right, var(--gradient1), var(--gradient2)) border-box;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.technology-card .basic-info {
+    flex-grow: 1;
+}
+
+.technology-card .basic-info h3 {
+    padding-bottom: 10px;
+}
+
+.technology-card .percentage {
+    height: 10px;
+    background: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    border-radius: 16px;
+}
