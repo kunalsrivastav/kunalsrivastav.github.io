@@ -1,10 +1,12 @@
 import React from 'react';
 import './about-me.css';
+import { FaLocationArrow } from 'react-icons/fa';
 
 const ABOUT_ME_INFO = [
     {
-        key: '4',
         timespan: 'Apr 2022 - Apr 2023',
+        title: 'Euler Motors | Software Developer - Intern',
+        location: 'New Delhi, India',
         // eslint-disable-next-line
         description: 'As a software developer intern at an EV company, I had the opportunity to work on an exciting project called the Fleet Management Web App. This web application was designed to cater to the needs of customers who purchased vehicles from our company. It aimed to provide them with a comprehensive and user-friendly platform to efficiently manage their vehicle fleet. \
                         The Fleet Management Web App offered a range of features to ensure that customers could effectively monitor and control their vehicles. The app\'s dashboard provided an overview of all the vehicles available in the fleet, allowing customers to access important information at a glance. The vehicles were displayed on a map, with each vehicle represented as a marker or cluster of markers, making it easy to visualize the distribution and status of the fleet. \
@@ -16,18 +18,21 @@ const ABOUT_ME_INFO = [
                         Overall, the Fleet Management Web App empowered customers to efficiently manage their vehicle fleet, leveraging features such as live tracking, trip history, notifications, charging station information, and comprehensive reports.'
     },
     {
-        key: '3',
         timespan: 'Aug 2019 - May 2023',
+        title: 'GLA University | Student',
+        location: 'Mathura, UP, India',
         description: 'Completed Bachelor\'s of Technology in Computer Science Engineering from GLA University, Mathura, India.'
     },
     {
-        key: '2',
         timespan: 'May 2019',
+        title: 'Vishwanath Academy | Student',
+        location: 'Lucknow, UP, India',
         description: 'Completed Intermediate(CBSE - PCM) from Vishwanath Academy, Lucknow, India.'
     },
     {
-        key: '1',
         timespan: 'May 2017',
+        title: 'Vishwanath Academy | Student',
+        location: 'Lucknow, UP, India',
         description: 'Completed High School(CBSE) from Vishwanath Academy, Lucknow, India.'
     }
 ]
@@ -38,10 +43,14 @@ const AboutMe = () => {
             <h2>About me</h2>
             <div className='about-box'>
                 {
-                    ABOUT_ME_INFO?.map((aboutMe: any) => {
-                        return <div key={aboutMe?.key} className='about-card'>
+                    ABOUT_ME_INFO?.map((aboutMe: any, index: number) => {
+                        return <div key={index} className='about-card'>
                             <h3>{aboutMe?.timespan}</h3>
-                            <p>{aboutMe?.description}</p>
+                            <div className='about-card-details'>
+                                <h4>{aboutMe?.title}</h4>
+                                <h6><FaLocationArrow /> {aboutMe?.location}</h6>
+                                <p>{aboutMe?.description}</p>
+                            </div>
                         </div>
                     })
                 }
